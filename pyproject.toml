@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ml-aurelien-geron"
+version = "0.1.0"
+description = "Hands-On Machine Learning with Scikit-Learn & TensorFlow"
+authors = ["Aurélien Géron", "Vincent Reau"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<=3.12.3"
+python-dotenv = "1.0.0"
+ipython = "^9.0.2"
+mysql = "^0.0.3"
+mysql-connector-python = "^9.2.0"
+numpy = "^2.2.4"
+pandas = "^2.2.3"
+matplotlib = "^3.10.1"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
